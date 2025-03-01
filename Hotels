@@ -1,126 +1,126 @@
-import random
-
-loyalty_points = {}
-bookings = {}
-
-def generate_booking_reference():
-    return "REF" + str(random.randint(1000, 9999))
-
-def display_amenities():
-    print("Amenities available:")
-    print("- Free WiFi")
-    print("- Complimentary Breakfast")
-    print("- Swimming Pool")
-    print("- Gym Access")
-    print("- 24/7 Room Service")
-
-def book_hotel(hotel_name, per_room, max_persons, discount_threshold, discount, available_rooms):
-    print(f"{hotel_name} package is {per_room} per room")
-    print(f"IN A {hotel_name.upper()} ROOMS, ONLY {max_persons} MEMBERS ARE ALLOWED. PLEASE BOOK YOUR ACCOMMODATION ACCORDINGLY.")
-    display_amenities()
-    
-    if available_rooms <= 0:
-        print("Sorry, no rooms available at this hotel.")
-        return
-    
-    var = input("Do you want to book this room? (yes/no): ").strip().lower()
+def ITC_Kohenurhotel():
+    print(" ITC Kohenur   package is 2 k per room")
+    print(" IN A ITC KOHENUR HOTEL ROOMS, ONLY FOUR MEMBERS ARE ALLOWED. PLEASE BOOK YOUR ACCOMMODATION ACCORDINGLY. ")
+    var=input(" do you want to book this room: ")
     if var == "yes":
-        fullname = input("Enter your full name: ")
-        age = int(input("Enter your age: "))
-        gender = input("Enter your gender (male/female/other): ")
-        persons = int(input("Enter number of persons: "))
-        mobilenumber = input("Enter your mobile number: ")
-        number_of_rooms = int(input("Enter number of rooms: "))
-        
-        if persons > max_persons * number_of_rooms:
-            print(f"Only {max_persons} members are allowed per room. Please book accordingly.")
-            return
-        
-        if number_of_rooms > available_rooms:
-            print("Not enough rooms available. Please try booking fewer rooms.")
-            return
-        
-        total_amount = per_room * number_of_rooms
-        if total_amount >= discount_threshold:
-            total_amount -= discount
-            print(f"Hi {fullname}, you have booked a room in {hotel_name}. Your bill exceeded {discount_threshold}, so you get a discount of {discount}. Total amount to pay: {total_amount}")
-        else:
-            print(f"Hi {fullname}, you have booked a room in {hotel_name}. Total amount to pay: {total_amount}")
-        
-        # Generate booking reference
-        booking_ref = generate_booking_reference()
-        bookings[booking_ref] = fullname
-        print(f"Your booking reference number is: {booking_ref}")
-        
-        # Loyalty points
-        loyalty_points[fullname] = loyalty_points.get(fullname, 0) + 10
-        print(f"You earned 10 loyalty points! Total points: {loyalty_points[fullname]}")
-        
-        # Payment selection
-        print("Select Payment Method:")
-        print("1. Cash")
-        print("2. Credit Card")
-        print("3. UPI")
-        payment_choice = input("Enter your choice (1/2/3): ")
-        if payment_choice == "1":
-            print("Payment method: Cash")
-        elif payment_choice == "2":
-            print("Payment method: Credit Card")
-        elif payment_choice == "3":
-            print("Payment method: UPI")
-        else:
-            print("Invalid choice. Defaulting to Cash.")
-        
-        print("Booking Successful! Thank you for choosing our hotel.")
-        
-        review = input("Would you like to leave a review? (yes/no): ").strip().lower()
-        if review == "yes":
-            feedback = input("Enter your review: ")
-            print("Thank you for your feedback!")
+        per_room=2000
+        fullname=input("enter you full name: ")
+        age=int(input("enter your age: "))
+        gender=input("enter your gender(male/female/other): ")
+        persons=int(input("enter numbers of persons: "))
+        mobilenumber=int(input ("enter your moblie number: "))
+        number_of_rooms=int(input("enter number of rooms: "))
+        total_amount=per_room*number_of_rooms
+        if total_amount>=6000:
+            offer_total_amount=total_amount-600
+            print(f" hi {fullname} you're booked a one star hotel room your bill is more than 6k so 600 less and you have to pay total amount is {offer_total_amount}")
+        print(f" hi {fullname} you're booked roomin ITC Kohenur Hotel and you have to pay total amount is {total_amount}")
+    
     else:
-        print("Thank you!")
+        print("thank you")
 
-def check_booking():
-    ref = input("Enter your booking reference number: ")
-    if ref in bookings:
-        print(f"Booking found: {bookings[ref]}")
+def Eastinhotel ():
+    print(" Eastin   package is 2 k per room")
+    print(" IN A EASTIN HOTEL ROOMS, ONLY FOUR MEMBERS ARE ALLOWED. PLEASE BOOK YOUR ACCOMMODATION ACCORDINGLY. ")
+    var=input(" do you want to book this room: ")
+    if var == "yes":
+        per_room=3000
+        fullname=input("enter you full name: ")
+        age=int(input("enter your age: "))
+        gender=input("enter your gender(male/female/other): ")
+        persons=int(input("enter numbers of persons: "))
+        mobilenumber=int(input ("enter your moblie number: "))
+        number_of_rooms=int(input("enter number of rooms: "))
+        total_amount=per_room*number_of_rooms
+        if total_amount>=8000:
+            offer_total_amount=total_amount-1000
+            print(f" hi {fullname} you're booked a Eastin Hotel room your bill is more than 8k so 1000 less and you have to pay total amount is {offer_total_amount}")
+        print(f" hi {fullname} you're booked room in Eastin Hotel and you have to pay total amount is {total_amount}")
     else:
-        print("No booking found with this reference number.")
+        print("thank you")
+
+
+def Tridenthotel():
+     print(" Trident   package is 4 k per room")
+     print(" IN A TRIDENT HOTEL ROOMS, ONLY FIVE MEMBERS ARE ALLOWED. PLEASE BOOK YOUR ACCOMMODATION ACCORDINGLY. ")
+     var=input(" do you want to book this room: ")
+     if var == "yes":
+        per_room=3500
+        fullname=input("enter you full name: ")
+        age=int(input("enter your age: "))
+        gender=input("enter your gender(male/female/other): ")
+        persons=int(input("enter numbers of persons: "))
+        mobilenumber=int(input ("enter your moblie number: "))
+        number_of_rooms=int(input("enter number of rooms: "))
+        total_amount=per_room*number_of_rooms
+        if total_amount>=9000:
+            offer_total_amount=total_amount-1200
+            print(f" hi {fullname} you're booked a Trident Hotel room your bill is more than 9k so 1200 less and you have to pay total amount is {offer_total_amount}")
+        print(f" hi {fullname} you're booked room in Trident Hotel and you have to pay total amount is {total_amount}")
+     else:
+        print("thank you")
+
+def sevenstarhotel():
+     print(" sevenstar  package is 4 k per room")
+     print(" IN A SEVEN-STAR HOTEL ROOMS, ONLY SIX MEMBERS ARE ALLOWED. PLEASE BOOK YOUR ACCOMMODATION ACCORDINGLY. ")
+     var=input(" do you want to book this room: ")
+     if var == "yes":
+        per_room=4000
+        fullname=input("enter you full name: ")
+        age=int(input("enter your age: "))
+        gender=input("enter your gender(male/female/other): ")
+        persons=int(input("enter numbers of persons: "))
+        mobilenumber=int(input ("enter your moblie number: "))
+        number_of_rooms=int(input("enter number of rooms: "))
+        total_amount=per_room*number_of_rooms
+        if total_amount>=12000:
+            offer_total_amount=total_amount-1500
+            print(f" hi {fullname} you're booked a sevenstar hotel room your bill is more than 12k so 1500 less and you have to pay total amount is {offer_total_amount}")
+        print(f" hi {fullname} you're booked roomin sevenstar hotel and you have to pay total amount is {total_amount}")
+     else:
+        print("thank you")
+
+def alphahotel():
+     print(" alphahotel  package is 1k per room")
+     print(" IN A ALPHAHOTEL ROOMS, ONLY TWO MEMBERS ARE ALLOWED. PLEASE BOOK YOUR ACCOMMODATION ACCORDINGLY. ")
+     var=input(" do you want to book this room: ")
+     if var == "yes":
+        per_hour=300
+        fullname=input("enter you full name: ")
+        age=int(input("enter your age: "))
+        gender=input("enter your gender(male/female/other): ")
+        persons=int(input("enter numbers of persons: "))
+        mobilenumber=int(input ("enter your moblie number: "))
+        number_of_hours=int(input("enter number of hours: "))
+        total_amount=per_hour*number_of_hours
+        if total_amount>=2000:
+            offer_total_amount=total_amount-200
+            print(f" hi {fullname} you're booked a alpha  hotel room your bill is more than 2k so 200 less and you have to pay total amount is {offer_total_amount}")
+        print(f" hi {fullname} you're booked room in alpha hotel and you have to pay total amount is {total_amount}")
+     else:
+        print("thank you")
 
 def main():
-    print("*** Welcome to Luxury Rooms and Hotels ***")
-    hotels = {
-        1: ("One Star Hotel", 2000, 4, 6000, 600, 5),
-        2: ("Three Star Hotel", 3000, 4, 8000, 1000, 3),
-        3: ("Five Star Hotel", 3500, 5, 9000, 1200, 4),
-        4: ("Seven Star Hotel", 4000, 6, 12000, 1500, 2),
-        5: ("Alpha Hotel", 300, 2, 2000, 200, 6),
-    }
-    
-    while True:
-        print("1. Book a Hotel Room")
-        print("2. Check Booking Status")
-        print("3. Exit")
-        choice = input("Enter your choice: ")
-        
-        if choice == "1":
-            for key, (name, price, max_persons, threshold, discount, rooms) in hotels.items():
-                print(f"{key}. {name} (Available Rooms: {rooms})")
-            try:
-                hotel_choice = int(input("Enter your choice: "))
-                if hotel_choice in hotels:
-                    book_hotel(*hotels[hotel_choice])
-                else:
-                    print("Invalid choice.")
-            except ValueError:
-                print("Please enter a valid number.")
-        elif choice == "2":
-            check_booking()
-        elif choice == "3":
-            print("Thank you for using our service!")
-            break
-        else:
-            print("Invalid option, please try again.")
+    print("***welcome to luxury rooms and hotels***")
+    print("1.ITC_Kohenurhotel")
+    print("2.Eastinhotel")
+    print("3.Tridenthotel")
+    print("4.sevenstarhotel")
+    print("5.alphahotel")
+    choose_number=int(input("enter your choise: "))
+    if choose_number == 1:
+        ITC_Kohenurhotel()
+    elif choose_number == 2:
+        Eastinhotel()
+    elif choose_number == 3:
+        Tridenthotel()
+    elif choose_number == 4:
+        sevenstarhotel()
+    elif choose_number == 5:
+        alphahotel()
+    else:
+        print("invalid choice")
+main()
 
-if __name__ == "__main__":
-    main()
+
+       
